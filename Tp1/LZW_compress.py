@@ -55,4 +55,3 @@ def compress(string) :
 
     return binary_to_ascii_with_replacement(compressedStringBit)
 
-
