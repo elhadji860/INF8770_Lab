@@ -28,7 +28,7 @@ class Interval() :
 
 def shortest_binary_fraction_in_interval(a: float, b: float):
 
-    if a >= b:
+    if a > b:
       return
 
     q = 0
@@ -93,8 +93,9 @@ def compress(txt) :
         interval.changeLimits(limits[0], limits[1])
 
         interval.defineSingIntervals()
+        
+    print(interval.maxLimit)
     
     return shortest_binary_fraction_in_interval(interval.minLimit, interval.maxLimit)
 
     
-print(compress("fedrfefdfwsfdsg"))

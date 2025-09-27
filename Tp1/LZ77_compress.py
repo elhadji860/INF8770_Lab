@@ -69,9 +69,16 @@ def compress(txt, dictSize) :
         else : 
             compressionInfo.append([chosenX + 1 , matchingLength, txt[i - 1]])
         
-        
+    compressedString = ""
+
+    for x in compressionInfo : 
+        compressedString += str(x[0])
+        compressedString += str(x[1])
+        compressedString += str(x[2])
+
+    print(compressedString)
     
-    return huffman_compress.compress(str(compressionInfo))
+    return huffman_compress.compress(compressedString)
 
    
 
