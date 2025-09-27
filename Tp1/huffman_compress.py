@@ -106,6 +106,6 @@ def compress(str) :
 
 
 
-print(compress("dfdjfeofkofrnj"))
+
     
 
