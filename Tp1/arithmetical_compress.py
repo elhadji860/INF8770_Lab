@@ -1,5 +1,6 @@
 from fractions import Fraction
 import math
+import huffman_compress
 
 class Interval() : 
     maxLimit= 1
@@ -94,8 +95,13 @@ def compress(txt) :
 
         interval.defineSingIntervals()
         
-    print(interval.maxLimit)
+    frequencies_string = ""
     
-    return shortest_binary_fraction_in_interval(interval.minLimit, interval.maxLimit)
+    for key in data : 
+        frequencies_string += key
+        frequencies_string += str(data[key])
+
+    
+    return huffman_compress.compress(frequencies_string) + shortest_binary_fraction_in_interval(interval.minLimit, interval.maxLimit) + huffman_compress.compress(str(len(txt)))
 
     

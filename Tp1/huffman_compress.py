@@ -99,9 +99,6 @@ def compress(str) :
 
     compressedText = binary_to_ascii_with_replacement(compressedStrBit)
 
-    #print (print(sys.getsizeof(str), "bytes \n"))
-    #print (print(sys.getsizeof(compressedText), "bytes \n"))
-
     return compressedText
 
 

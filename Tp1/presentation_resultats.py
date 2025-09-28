@@ -4,6 +4,7 @@ import LZW_compress as lzw
 import LZ77_compress as lz77
 import huffman_compress as huffman
 import arithmetical_compress as art
+import zlib
 import time
 
 def presenter_resultats(resultats, titre="Résultats de compression"):
@@ -45,7 +46,7 @@ exectimelzw = float(time.time() - startTimelzw)
 taux_lzw = len(compressLzw)/len(textString)
 
 startTimelz77 = time.time()
-compressLz77 = lz77.compress(textString, len(textString)/10)
+compressLz77 = lz77.compress(textString, 20)
 exectimelz77 = float(time.time() - startTimelz77)
 taux_lz77 = len(compressLz77)/len(textString)
 
